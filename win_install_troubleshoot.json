@@ -5,6 +5,17 @@
       "message": "git clone https://github.com/gitmylo/audio-webui"
     }
   }, {
+    "method": "shell.run",
+    "params": {
+      "message": "activate_only.bat",
+      "path": "audio-webui"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "pip install --upgrade numpy==1.23.5"
+    }
+  }, {
     "method": "shell.start",
     "params": {
       "path": "audio-webui"

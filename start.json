@@ -7,7 +7,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "{{os.platform() === 'win32' ? 'run.bat' : 'bash run.sh'}}",
+      "message": "{{os.platform() === 'win32' ? 'python main.py' : 'bash run.sh'}}",
       "on": [{
         "event": "/Running on local URL:  (http:\/\/[0-9.:]+)/",
         "return": "{{event.matches[0][1]}}"
