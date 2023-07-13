@@ -1,0 +1,28 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "git clone https://github.com/gitmylo/audio-webui"
+    }
+  }, {
+    "method": "shell.start",
+    "params": {
+      "path": "audio-webui"
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'install.bat' : 'bash install.sh'}}",
+      "on": [{
+        "event": "/Press any key to exit/",
+        "return": true
+      }]
+    }
+  }, {
+    "method": "notify",
+    "params": {
+      "html": "<b>Install complete!</b> Click to go to the start script.",
+      "href": "start.json"
+    }
+  }]
+}

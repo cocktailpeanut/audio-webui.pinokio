@@ -1,0 +1,25 @@
+{
+  "run": [{
+    "method": "shell.start",
+    "params": {
+      "path": "audio-webui"
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'run.bat' : 'bash run.sh'}}",
+      "on": [{
+        "event": "/Running on local URL:  (http:\/\/[0-9.:]+)/",
+        "return": "{{event.matches[0][1]}}"
+      }]
+    }
+  }, {
+    "method": "notify",
+    "params": {
+      "html": "Server running at {{input}}",
+      "href": "{{input}}"
+    }
+  }, {
+    "method": "process.wait"
+  }]
+}
