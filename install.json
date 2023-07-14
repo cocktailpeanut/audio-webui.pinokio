@@ -7,13 +7,7 @@
   }, {
     "method": "shell.run",
     "params": {
-      "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m venv venv",
-      "path": "audio-webui"
-    }
-  }, {
-    "method": "shell.run",
-    "params": {
-      "message": "audio-webui{{path.sep}}venv{{path.sep}}bin{{path.sep}}pip install mecab"
+      "message": "{{os.platform() === 'win32' ? '' : 'brew install mecab'}}"
     }
   }, {
     "method": "shell.start",
