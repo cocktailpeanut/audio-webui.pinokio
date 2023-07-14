@@ -7,7 +7,7 @@
   }, {
     "method": "shell.run",
     "params": {
-      "message": "python -m venv venv",
+      "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m venv venv",
       "path": "audio-webui"
     }
   }, {
