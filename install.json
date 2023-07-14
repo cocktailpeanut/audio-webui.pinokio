@@ -5,6 +5,17 @@
       "message": "git clone https://github.com/gitmylo/audio-webui"
     }
   }, {
+    "method": "shell.run",
+    "params": {
+      "message": "python -m venv venv",
+      "path": "audio-webui"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "audio-webui{{path.sep}}venv{{path.sep}}bin{{path.sep}}pip install mecab"
+    }
+  }, {
     "method": "shell.start",
     "params": {
       "path": "audio-webui"
@@ -18,7 +29,6 @@
         "return": true
       }]
     }
-
   }, {
     "method": "notify",
     "params": {
