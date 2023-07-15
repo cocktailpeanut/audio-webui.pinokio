@@ -2,6 +2,11 @@
   "run": [{
     "method": "shell.run",
     "params": {
+      "message": "brew install mecab"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
       "message": "pip install TTS"
     }
   }]
