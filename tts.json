@@ -13,7 +13,16 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "path": "{{os.platform() === 'win32' ? 'venv\\Scripts\\activate' : 'source venv/bin/activate'}}",
+      "message": "{{os.platform() === 'win32' ? 'venv\\Scripts\\activate' : 'source venv/bin/activate'}}",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "pip install TTS",
       "on": [{
         "event": null,
         "return": true
