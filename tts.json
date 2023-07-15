@@ -2,31 +2,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "python -m venv venv",
-      "path": "audio-webui"
-    }
-  }, {
-    "method": "shell.start",
-    "params": {
-      "path": "audio-webui"
-    }
-  }, {
-    "method": "shell.enter",
-    "params": {
-      "message": "{{os.platform() === 'win32' ? 'venv\\Scripts\\activate' : 'source venv/bin/activate'}}",
-      "on": [{
-        "event": null,
-        "return": true
-      }]
-    }
-  }, {
-    "method": "shell.enter",
-    "params": {
-      "message": "pip install TTS",
-      "on": [{
-        "event": null,
-        "return": true
-      }]
+      "message": "pip install TTS"
     }
   }]
 }
