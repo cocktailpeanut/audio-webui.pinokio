@@ -17,17 +17,19 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "{{os.platform() === 'win32' ? 'python main.py' : 'bash install.sh'}}",
+      "message": "{{os.platform() === 'win32' ? 'python main.py' : 'bash run.sh'}}",
       "on": [{
-        "event": "/Press any key to exit/",
-        "return": true
+        "event": "/Running on local URL:  (http:\/\/[0-9.:]+)/",
+        "return": "{{event.matches[0][1]}}"
       }]
     }
   }, {
     "method": "notify",
     "params": {
-      "html": "<b>Install complete!</b> Click to go to the start script.",
-      "href": "start.json"
+      "html": "Server running at {{input}}",
+      "href": "{{input}}"
     }
+  }, {
+    "method": "process.wait"
   }]
 }
