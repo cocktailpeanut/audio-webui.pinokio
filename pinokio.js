@@ -26,6 +26,10 @@ module.exports = {
         "on": "<i class='fa-solid fa-rocket'></i> Open Web UI",
         "href": (session && session.url ? session.url : "http://127.0.0.1:7860"),
         "target": "_blank"
+      }, {
+        "when": "start.js",
+        "on": "<i class='fa-solid fa-desktop'></i> Server",
+        "href": "start.js?fullscreen=true"
       }]
     } else {
       return [{
