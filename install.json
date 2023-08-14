@@ -24,15 +24,15 @@
       }]
     }
   }, {
-    "method": "shell.enter",
+    "method": "input",
     "params": {
-      "message": "pip install -U numpy",
-      "on": [{
-        "event": null,
-        "return": true
-      }]
+      "title": "Install Complete",
+      "description": "Go back to the dashboard and launch the app!"
     }
   }, {
-    "method": "process.wait"
+    "method": "browser.open",
+    "params": {
+      "uri": "/?selected=Audio Webui"
+    }
   }]
 }

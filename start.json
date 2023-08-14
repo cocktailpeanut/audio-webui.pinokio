@@ -14,10 +14,16 @@
       }]
     }
   }, {
-    "method": "notify",
+    "method": "self.set",
     "params": {
-      "html": "Server running at {{input}}",
-      "href": "{{input}}"
+      "session.json": {
+        "url": "{{input}}"
+      }
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/?selected=Audio Webui"
     }
   }, {
     "method": "process.wait"
