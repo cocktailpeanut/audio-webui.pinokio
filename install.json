@@ -24,10 +24,13 @@
       }]
     }
   }, {
-    "method": "notify",
+    "method": "shell.enter",
     "params": {
-      "html": "Server running at {{input}}",
-      "href": "{{input}}"
+      "message": "pip install -U numpy",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
     }
   }, {
     "method": "process.wait"
