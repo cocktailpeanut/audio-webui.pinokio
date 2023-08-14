@@ -2,7 +2,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone https://github.com/gitmylo/audio-webui"
+      "message": "git clone https://github.com/cocktailpeanut/audio-webui"
     }
   }, {
     "method": "shell.run",
