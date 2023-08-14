@@ -27,9 +27,9 @@ module.exports = {
         "href": (session && session.url ? session.url : "http://127.0.0.1:7860"),
         "target": "_blank"
       }, {
-        "when": "start.js",
+        "when": "start.json",
         "on": "<i class='fa-solid fa-desktop'></i> Server",
-        "href": "start.js?fullscreen=true"
+        "href": "start.json?fullscreen=true"
       }]
     } else {
       return [{
