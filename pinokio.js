@@ -16,7 +16,6 @@ module.exports = {
         "when": "start.js",
         "on": "<i class='fa-solid fa-spin fa-circle-notch'></i> Running",
         "type": "label",
-        "href": "start.js"
       }, {
         "when": "start.js",
         "off": "<i class='fa-solid fa-power-off'></i> Launch",
@@ -30,7 +29,7 @@ module.exports = {
     } else {
       return [{
         "html": "<i class='fa-solid fa-microchip'></i> Install",
-        "href": "install.json"
+        "href": "install.js?fullscreen=true&run=true"
       }]
     }
   }
