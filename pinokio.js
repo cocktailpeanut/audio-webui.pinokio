@@ -13,15 +13,15 @@ module.exports = {
     let installed = await exists(path.resolve(__dirname, "audio-webui", "venv"))
     if (installed) {
       return [{
-        "when": "start.js",
+        "when": "start.json",
         "on": "<i class='fa-solid fa-spin fa-circle-notch'></i> Running",
         "type": "label",
       }, {
-        "when": "start.js",
+        "when": "start.json",
         "off": "<i class='fa-solid fa-power-off'></i> Launch",
-        "href": "start.js?fullscreen=true&run=true",
+        "href": "start.json?fullscreen=true&run=true",
       }, {
-        "when": "start.js",
+        "when": "start.json",
         "on": "<i class='fa-solid fa-rocket'></i> Open Web UI",
         "href": (session && session.url ? session.url : "http://127.0.0.1:7860"),
         "target": "_blank"
@@ -29,7 +29,7 @@ module.exports = {
     } else {
       return [{
         "html": "<i class='fa-solid fa-microchip'></i> Install",
-        "href": "install.js?fullscreen=true&run=true"
+        "href": "install.json?fullscreen=true&run=true"
       }]
     }
   }
